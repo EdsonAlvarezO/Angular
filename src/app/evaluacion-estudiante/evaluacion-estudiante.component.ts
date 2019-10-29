@@ -45,7 +45,6 @@ export class EvaluacionEstudianteComponent implements OnInit {
   sacarNota():number{
     if(this.validarEvaluaciones()){
           for (var i = this.evaluaciones.length - 1; i >= 0; i--) {
-              alert(this.evaluaciones[i].porcentaje);
               this.notaFinal += this.evaluaciones[i].porcentaje;
                 }
      }else{

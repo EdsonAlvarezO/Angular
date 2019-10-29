@@ -21,10 +21,11 @@
 	margin: 20px;
 }
 .aprobado{
-	color: #18EB88;
-	font-size: 20px;
+	color: #08963F;
+	font-size: 15px;
+	font: italic;
 }
 .repro{
-	color: #FF0022;
+	color: #DC235D;
 	font-size: 20px;
 }

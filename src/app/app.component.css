@@ -13,3 +13,10 @@
 	height: 20px; width: 10;
 	border-radius: 50;
 }
+.flow-text{
+	box-shadow: 5px 5px 5px 5px rgb(0,0,0,0.1);
+	margin: 20px;
+}
+.tab:active{
+	background-color: black;
+}
