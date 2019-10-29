@@ -1,0 +1,39 @@
+<p id="est">
+    Estudiante:Edson Alvarez Obando <br>
+    Sistema Avatar.Sys
+</p>
+<table class="tabla">
+        <thead>
+          <tr >
+              <th >Rubro</th>
+              <th>Valor</th>
+              <th *ngIf="!current_eva.calificado">Calificar</th>
+              <th *ngIf="current_eva.calificado">Porcentaje obtenido</th>
+              <th ></th>
+          </tr>
+        </thead>
+
+        <tbody >
+          <tr *ngFor = "let evaluacion of evaluaciones" >
+            <td>{{ evaluacion.nombre }}</td>
+            <td>{{ evaluacion.valor + "%"}}</td>
+            <td>
+            	<input  [(ngModel)]="evaluacion.calificacion" *ngIf="!evaluacion.calificado"  type="number" id="res" placeholder="0-100" max="100" min="0" >
+              <label *ngIf="evaluacion.calificado">{{evaluacion.porcentaje + "%"}}</label>
+            </td>
+            <td >
+                <button *ngIf="!evaluacion.calificado" (click)="edit(evaluacion)" class="btn waves-effect waves-light" id="btn_acep">Aceptar</button>
+                
+            </td>
+          </tr>  
+          <tbody >
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+            	<button *ngIf="!evaluado" (click)="sacarNota()" class="btn waves-effect waves-light" id="btn_Conf">Confirmar</button>
+              <label class="aprobado" *ngIf="aprobado" >{{"Nota final del estudiante: "+notaFinal}}</label>
+              <label class="repro" *ngIf="reprobado" >{{"Nota final del estudiante: "+ notaFinal}}</label>
+            </td>
+          
+</table>

@@ -1,0 +1,41 @@
+<div *ngIf = "mostrar_form" class ="datos_info">
+  	<br>
+  	<label  id= "dat">Nombre</label>
+  	<input [(ngModel)]="current_eva.nombre" type="text" class="inputs_rubro"required autofocus>
+  	<label id= "dat">Porcentaje</label>
+  	<input [(ngModel)]="current_eva.valor" type="number" class="inputs_porc" required max="100" min="0" placeholder="0-100"> 
+    <a id = "btn_save" class="waves-effect waves-light btn" (click) = "save()">Guardar</a>
+    <a id = "btn_save" class="waves-effect waves-light btn" (click) = "cancelar()">Cancelar</a>
+</div>
+
+<table *ngIf = "!mostrar_form" class ="datos_e">
+        <thead>
+          <tr >
+              <th>Rubro</th>
+              <th>Porcentaje</th>
+              <th>
+			        <button class="waves-effect waves-light btn-small" (click)="add()">Nuevo</button>
+				      </th>
+          </tr>
+        </thead>
+
+        <tbody >
+          <tr *ngFor = "let evaluacion of evaluaciones">
+            <td>{{ evaluacion.nombre }}</td>
+            <td>{{ evaluacion.valor + "%"}}</td>
+            <td>
+            	<button id = "btn"class="btn waves-effect waves-light" (click)="delete(evaluacion)">Eliminar</button>
+				      <button id = "btn" class="btn waves-effect waves-light" (click)="edit(evaluacion)">Editar</button>
+            </td>
+
+          </tr>
+          <tbody>
+            <td></td>
+            <td></td>
+            <td>
+              <button (click)="validar()" id = "btn1" class="btn waves-effect waves-light" type="submit" name="action">
+                Guardar Evaluacion
+              </button>
+            </td>
+          </tbody>
+</table>

@@ -1,0 +1,15 @@
+.nav-extended{
+	background-color: #014E70;
+	}
+.brand-logo{
+	margin: 5px;
+
+}	
+.nav-extended{
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	box-shadow: 5px 5px 5px 5px rgb(0,0,0,0.3); 
+}
+.logo{
+	height: 20px; width: 10;
+	border-radius: 50;
+}
