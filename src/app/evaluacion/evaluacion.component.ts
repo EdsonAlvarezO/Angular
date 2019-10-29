@@ -48,6 +48,10 @@ export class EvaluacionComponent implements OnInit {
 
   validar(){
     let porcentaje_total = 0;
+    if(this.evaluaciones.length ==0 || this.evaluaciones.length ==null){
+      alert("Favor crear rubros");
+      return;
+    }
     for (var i = this.evaluaciones.length - 1; i >= 0; i--) {
       porcentaje_total += this.evaluaciones[i].valor;
     }

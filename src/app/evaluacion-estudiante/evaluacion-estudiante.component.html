@@ -31,7 +31,7 @@
             <td></td>
             <td></td>
             <td>
-            	<button *ngIf="!evaluado" (click)="sacarNota()" class="btn waves-effect waves-light" id="btn_Conf">Confirmar</button>
+            	<button *ngIf="!evaluado" (click)="sacarNota()" class="btn waves-effect waves-yellow">Confirmar</button>
               <label class="aprobado" *ngIf="aprobado" >{{"Nota final del estudiante: "+notaFinal}}</label>
               <label class="repro" *ngIf="reprobado" >{{"Nota final del estudiante: "+ notaFinal}}</label>
             </td>

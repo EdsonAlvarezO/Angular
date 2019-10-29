@@ -1,11 +1,15 @@
 <div *ngIf = "mostrar_form" class ="datos_info">
-  	<br>
-  	<label  id= "dat">Nombre</label>
-  	<input [(ngModel)]="current_eva.nombre" type="text" class="inputs_rubro"required autofocus>
-  	<label id= "dat">Porcentaje</label>
-  	<input [(ngModel)]="current_eva.valor" type="number" class="inputs_porc" required max="100" min="0" placeholder="0-100"> 
-    <a id = "btn_save" class="waves-effect waves-light btn" (click) = "save()">Guardar</a>
-    <a id = "btn_save" class="waves-effect waves-light btn" (click) = "cancelar()">Cancelar</a>
+  <form>
+    <DIV>
+      	<br>
+      	<label  id= "dat">Nombre</label>
+      	<input [(ngModel)]="current_eva.nombre" type="text" class="inputs_rubro"required autofocus>
+      	<label id= "dat">Porcentaje</label>
+      	<input [(ngModel)]="current_eva.valor" type="number" class="inputs_porc" required max="100" min="0" placeholder="0-100"> 
+        <a id = "btn_save" class="waves-effect waves-light btn" (click) = "save()">Guardar</a>
+        <a id = "btn_save" class="waves-effect waves-light btn" (click) = "cancelar()">Cancelar</a>
+    </DIV>
+  </form>
 </div>
 
 <table *ngIf = "!mostrar_form" class ="datos_e">

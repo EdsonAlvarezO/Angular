@@ -44,18 +44,18 @@ export class EvaluacionEstudianteComponent implements OnInit {
 
   sacarNota():number{
     if(this.validarEvaluaciones()){
-      alert("paso");
-    for (var i = this.evaluaciones.length - 1; i >= 0; i--) {
-        alert(this.evaluaciones[i].porcentaje);
-        this.notaFinal += this.evaluaciones[i].porcentaje;
-          }
-      }
+          for (var i = this.evaluaciones.length - 1; i >= 0; i--) {
+              alert(this.evaluaciones[i].porcentaje);
+              this.notaFinal += this.evaluaciones[i].porcentaje;
+                }
+     }else{
+        return;
+     }
     if(this.notaFinal >= 75){
       this.aprobado = true;
     }else{
       this.reprobado = true;
-    }  
-    alert(this.notaFinal);
+    }
     this.evaluado = true;
       return this.notaFinal;
   }
